@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Mirrored from www.jxrtkj.com/cases.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2026 07:10:25 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客户案例 - 京信瑞通科技</title>
+    <style>
+        /* 德系工业风核心基础样式 */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; color: #333; line-height: 1.6; background-color: #f8f9fa; }
+        a { text-decoration: none; color: inherit; }
+
+        /* 统一顶层页眉 */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 12px 10%; background: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .double-logo-box { display: flex; align-items: center; gap: 15px; }
+        .logo-jx { height: 42px; width: auto; }
+        .logo-divider { width: 1px; height: 24px; background-color: #d2d6dc; }
+        .logo-bruker { height: 32px; width: auto; }
+        nav ul { display: flex; list-style: none; align-items: center; }
+        nav ul li { margin-left: 30px; font-weight: 500; }
+        nav ul li a:hover, nav ul li a.active { color: #0056b3; }
+
+        .container { padding: 60px 10%; max-width: 1300px; margin: 0 auto; }
+        .page-title { font-size: 32px; color: #002A54; margin-bottom: 20px; font-weight: 700; border-bottom: 2px solid #002A54; padding-bottom: 10px; }
+        .page-subtitle { font-size: 16px; color: #666; margin-bottom: 50px; }
+
+        /* 经典案例卡片横向排版 */
+        .case-card { background: #ffffff; border-radius: 8px; overflow: hidden; margin-bottom: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; border: 1px solid #eaeaea; }
+        .case-card:nth-child(even) { flex-direction: row-reverse; }
+        
+        /* 核心改动点：图片口袋变为容纳2张图垂直排列，内嵌自适应边距 */
+        .case-img-box { width: 40%; background: #eef2f5; display: flex; flex-direction: column; gap: 15px; padding: 25px; align-items: center; justify-content: center; }
+        
+        /* 案例图片样式升级：增加放大镜指针与悬停效果 */
+        .case-thumb-img { width: 100%; height: 210px; object-fit: cover; border-radius: 6px; border: 1px solid #eaeaea; cursor: zoom-in; transition: transform 0.2s, box-shadow 0.2s; }
+        .case-thumb-img:hover { transform: scale(1.02); box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-color: #0056b3; }
+
+        /* 案例核心文案区域 */
+        .case-content { width: 60%; padding: 45px; }
+        .factory-name { font-size: 26px; color: #002A54; font-weight: 700; margin-bottom: 5px; }
+        .project-title { font-size: 16px; font-weight: 600; color: #0056b3; margin-bottom: 25px; padding-bottom: 12px; border-bottom: 1px dashed #e2e8f0; }
+        
+        /* 标准化方案段落排版 */
+        .info-section { margin-bottom: 18px; font-size: 14px; }
+        .info-row { display: flex; align-items: flex-start; margin-bottom: 12px; line-height: 1.6; }
+        .info-row strong { color: #1a202c; display: inline-block; width: 85px; font-weight: 700; flex-shrink: 0; }
+        .info-text { color: #4a5568; text-align: justify; flex-grow: 1; }
+
+        /* 应用成果清单样式 */
+        .results-box { background: #f8f9fa; border-left: 4px solid #0056b3; padding: 18px 20px; margin-top: 20px; border-radius: 0 4px 4px 0; }
+        .results-title { font-size: 15px; font-weight: 700; color: #002A54; margin-bottom: 10px; }
+        .bullet-points { list-style: none; display: grid; grid-template-columns: 1fr; gap: 8px; }
+        .bullet-points li { font-size: 13.5px; color: #4a5568; padding-left: 18px; position: relative; }
+        .bullet-points li::before { content: '▪'; color: #0056b3; position: absolute; left: 0; font-weight: bold; }
+
+        /* 核心黑科技：黑色半透明全屏大图遮罩层（灯箱效果） */
+        .image-lightbox-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); display: flex; align-items: center; justify-content: center; z-index: 2000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; cursor: zoom-out; }
+        .image-lightbox-overlay.active { opacity: 1; pointer-events: auto; }
+        .lightbox-big-img { max-width: 90%; max-height: 85%; object-fit: contain; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transform: scale(0.95); transition: transform 0.3s ease; }
+        .image-lightbox-overlay.active .lightbox-big-img { transform: scale(1); }
+
+        /* 页脚 */
+        footer { background: #00152B; color: #a0aec0; padding: 40px 10%; font-size: 14px; margin-top: 80px; }
+        .footer-content { text-align: center; color: #718096; font-size: 13px; }
+
+        /* 响应式适配 */
+        @media (max-width: 992px) {
+            .case-card, .case-card:nth-child(even) { flex-direction: column; }
+            .case-img-box, .case-content { width: 100%; }
+            .case-thumb-img { height: 240px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="double-logo-box">
+            <a href="index-2.html"><img class="logo-jx" src="%e4%ba%ac%e4%bf%a1-Photoroom.png" alt="京信瑞通科技"></a>
+            <span class="logo-divider"></span>
+            <a href="index-2.html"><img class="logo-bruker" src="bruker_logo.png" alt="Bruker"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index-2.html">首页</a></li>
+                <li><a href="products.html">产品中心</a></li> 
+                <li><a href="cases.html" class="active">客户案例</a></li>
+                <li><a href="news.html">新闻发布</a></li>
+                <li><a href="index-2.html#about">关于我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">客户案例 / CLIENT CASES</h1>
+        <p class="page-subtitle">携手中国顶尖水泥制造企业，部署德国布鲁克核心射线分析系统，打造高标准质量控制标杆业绩。</p>
+
+        <div class="cases-list">
+
+            <!-- 案例 1：永登祁连山水泥有限公司（双图独立放大版） -->
+            <div class="case-card">
+                <div class="case-img-box">
+                    <!-- 第一张现场照 -->
+                    <img class="case-thumb-img" src="lab1.jpg" onclick="openLightbox(this.src)" alt="永登祁连山水泥实验室现场1">
+                    <!-- 第二张现场照 -->
+                    <img class="case-thumb-img" src="lab1-2.jpg" onclick="openLightbox(this.src)" alt="永登祁连山水泥实验室现场2" onerror="this.src='lab1.jpg';">
+                </div>
+                <div class="case-content">
+                    <div class="factory-name">永登祁连山水泥有限公司</div>
+                    <div class="project-title">布鲁克 XRF & XRD 智能实验室解决方案</div>
+                    
+                    <div class="info-section">
+                        <div class="info-row">
+                            <strong>客户简介：</strong>
+                            <div class="info-text">永登祁连山水泥有限公司是国内大型现代化水泥生产企业之一，建立智能化实验室，旨在提升生产质量控制水平，实现熟料及水泥全过程快速检测，为稳定生产和工艺优化提供数据支撑。</div>
+                        </div>
+                        <div class="info-row">
+                            <strong>项目挑战：</strong>
+                            <div class="info-text">随着生产自动化水平不断提高，传统化学分析方法已难以满足快速检测需求。实验室需要建立覆盖化学成分分析与矿物组成分析的一体化检测平台，实现分析结果快速、准确、可追溯。</div>
+                        </div>
+                        <div class="info-row">
+                            <strong>解决方案：</strong>
+                            <div class="info-text">实验室配置 Bruker S8 TIGER 波长色散 X 射线荧光光谱仪（XRF）与 Bruker D8 ENDEAVOR X 射线衍射仪（XRD），结合 TOPAS Rietveld 定量分析软件，实现元素组成与矿物组成同步分析，为原料、生料、熟料及水泥产品提供完整的质量检测方案。</div>
+                        </div>
+                    </div>
+
+                    <div class="results-box">
+                        <div class="results-title">🏆 应用成果</div>
+                        <ul class="bullet-points">
+                            <li>实现化学成分与矿物组成一体化分析</li>
+                            <li>快速获得熟料 C3S、C2S、C3A、C4AF 及 f-CaO 等关键矿物含量</li>
+                            <li>提升实验室检测效率 and 分析一致性</li>
+                            <li>为窑系统运行优化、配料控制及产品质量稳定提供可靠的数据支持</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 案例 2：华润水泥（封开）有限公司（双图独立放大版） -->
+            <div class="case-card">
+                <div class="case-img-box">
+                    <!-- 第一张现场照 -->
+                    <img class="case-thumb-img" src="lab2.jpg" onclick="openLightbox(this.src)" alt="华润水泥封开实验室现场1">
+                    <!-- 第二张现场照 -->
+                    <img class="case-thumb-img" src="lab2-2.jpg" onclick="openLightbox(this.src)" alt="华润水泥封开实验室现场2" onerror="this.src='lab2.jpg';">
+                </div>
+                <div class="case-content">
+                    <div class="factory-name">华润水泥（封开）有限公司</div>
+                    <div class="project-title">大型智能实验室分析平台项目</div>
+                    
+                    <div class="info-section">
+                        <div class="info-row">
+                            <strong>客户简介：</strong>
+                            <div class="info-text">华润水泥（封开）有限公司建设大型智能实验室，承担生产质量控制、工艺优化及研发检测任务，对实验室检测能力、自动化程度及分析效率提出了更高要求。</div>
+                        </div>
+                        <div class="info-row">
+                            <strong>项目挑战：</strong>
+                            <div class="info-text">面对多条生产线的大批量样品检测需求，实验室需要兼顾检测速度、分析精度及数据一致性，实现元素分析与矿物相分析协同运行，并满足连续、高通量检测要求。</div>
+                        </div>
+                        <div class="info-row">
+                            <strong>解决方案：</strong>
+                            <div class="info-text">实验室部署了多台 Bruker S8 TIGER XRF 与 D8 ENDEAVOR XRD，构建高通量智能分析平台。结合自动制样系统及 TOPAS Rietveld 定量分析软件，实现样品自动检测、数据自动处理及分析结果统一管理。</div>
+                        </div>
+                    </div>
+
+                    <div class="results-box">
+                        <div class="results-title">🏆 应用成果</div>
+                        <ul class="bullet-points">
+                            <li>建立高效率、高自动化智能实验室分析平台</li>
+                            <li>实现元素分析与矿物分析协同检测</li>
+                            <li>提升实验室样品处理能力和检测效率</li>
+                            <li>为生产质量控制、工艺优化及产品研发提供准确、稳定的数据支持</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 纯静态高档弹窗组件（HTML底座） -->
+    <div class="image-lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
+        <img class="lightbox-big-img" id="lightboxBigImg" src="#" alt="放大查看">
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            Copyright © 2026 京信瑞通科技 - 德国布鲁克 (Bruker) 水泥行业独家代理商. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- 核心黑科技：控制图片放大缩小的极简脚本 -->
+    <script>
+        function openLightbox(imageSrc) {
+            var overlay = document.getElementById('lightboxOverlay');
+            var bigImg = document.getElementById('lightboxBigImg');
+            bigImg.src = imageSrc;
+            overlay.classList.add('active');
+        }
+
+        function closeLightbox() {
+            var overlay = document.getElementById('lightboxOverlay');
+            overlay.classList.remove('active');
+        }
+    </script>
+
+</body>
+
+<!-- Mirrored from www.jxrtkj.com/cases.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2026 07:10:30 GMT -->
+</html>

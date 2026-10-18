@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Mirrored from www.jxrtkj.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2026 07:10:45 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京信瑞通科技 - 德国布鲁克（Bruker）水泥行业独家代理商</title>
+    <style>
+        /* 德系工业风核心基础样式 */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; color: #333; line-height: 1.6; background-color: #ffffff; }
+        a { text-decoration: none; color: inherit; }
+
+        /* 顶部导航栏 */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 12px 10%; background: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .double-logo-box { display: flex; align-items: center; gap: 15px; }
+        .logo-jx { height: 42px; width: auto; display: block; object-fit: contain; }
+        .logo-divider { width: 1px; height: 24px; background-color: #d2d6dc; display: block; }
+        .logo-bruker { height: 32px; width: auto; display: block; object-fit: contain; }
+
+        nav ul { display: flex; list-style: none; align-items: center; }
+        nav ul li { margin-left: 30px; font-weight: 500; }
+        nav ul li a:hover { color: #0056b3; }
+
+        /* 宏观水泥厂大 Banner */
+        .hero { background: linear-gradient(rgba(0, 42, 84, 0.75), rgba(0, 42, 84, 0.75)), url('cement-factory.jpg') no-repeat center center/cover; padding: 120px 10%; text-align: center; color: #ffffff; }
+        .hero h1 { font-size: 38px; font-weight: 700; margin-bottom: 20px; letter-spacing: 1px; }
+        .hero p { font-size: 18px; max-width: 800px; margin: 0 auto 30px; font-weight: 300; }
+        .hero .btn { display: inline-block; padding: 12px 35px; background: #0056b3; color: #fff; font-weight: 500; border-radius: 4px; transition: background 0.3s; }
+        .hero .btn:hover { background: #003d82; }
+
+        /* 通用区块样式 */
+        .section { padding: 80px 10%; }
+        .section-title { text-align: center; font-size: 28px; color: #002A54; margin-bottom: 50px; position: relative; font-weight: 700; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: #0056b3; margin: 15px auto 0; }
+
+        /* 关于我们与4图产品矩阵 */
+        .about-container { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; }
+        .about-text p { margin-bottom: 20px; color: #666; font-size: 15px; }
+        .counters { display: flex; gap: 30px; margin-top: 30px; }
+        .counter-item { background: #f8f9fa; padding: 20px; flex: 1; border-radius: 4px; text-align: center; border-top: 3px solid #002A54; }
+        .counter-num { font-size: 28px; font-weight: 700; color: #002A54; margin-bottom: 5px; }
+        .counter-label { font-size: 13px; color: #666; }
+
+        /* 4张图高级组合矩阵墙 */
+        .image-matrix-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; background: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: inset 0 0 10px rgba(0,0,0,0.02); }
+        .matrix-item { background: #ffffff; border: 1px solid #eef2f5; border-radius: 6px; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; transition: all 0.3s; }
+        .matrix-item:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-color: #0056b3; }
+        .matrix-item img { max-width: 90%; height: 130px; object-fit: contain; display: block; }
+        .matrix-label { font-size: 11px; font-weight: 700; color: #002A54; background: #e6f0fa; padding: 2px 8px; border-radius: 10px; margin-top: 8px; text-align: center; }
+
+        /* 核心产品模块 */
+        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .product-card { background: #ffffff; border: 1px solid #eaeaea; border-radius: 4px; padding: 40px; transition: transform 0.3s, box-shadow 0.3s; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-color: #0056b3; }
+        .product-tag { display: inline-block; padding: 4px 12px; background: #e6f0fa; color: #002A54; font-size: 12px; font-weight: 600; border-radius: 2px; margin-bottom: 15px; }
+        .product-card h3 { font-size: 22px; color: #333; margin-bottom: 15px; }
+        .product-card ul { list-style-position: inside; color: #666; font-size: 14px; margin-bottom: 25px; }
+        .product-card ul li { margin-bottom: 8px; }
+        .product-link { color: #0056b3; font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; }
+        .product-link:hover { text-decoration: underline; }
+
+        /* 前沿专题：智能自动化实验室 */
+        .smart-lab { background-color: #f8f9fa; }
+        .lab-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .lab-container p { color: #666; margin-bottom: 40px; font-size: 16px; }
+        .lab-features { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; text-align: left; }
+        .lab-feat-item { background: #fff; padding: 20px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+        .lab-feat-item h4 { color: #002A54; font-size: 16px; margin-bottom: 10px; }
+        .lab-feat-item p { font-size: 13px; color: #777; margin-bottom: 0; }
+
+        /* 主页纯静态“我们的客户”墙样式（取消外链跳转） */
+        .client-cases { background: #ffffff; }
+        .logo-wall { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; align-items: center; justify-items: center; margin-top: 20px; }
+        @media (max-width: 992px) { .logo-wall { grid-template-columns: repeat(3, 1fr); } } 
+        @media (max-width: 576px) { .logo-wall { grid-template-columns: repeat(2, 1fr); } } 
+        
+        .client-logo-item { background: #ffffff; border: 1px dashed #e2e8f0; border-radius: 6px; padding: 12px; width: 100%; height: 90px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+        .client-logo-item:hover { border-color: #0056b3; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .client-logo-item img { max-width: 90%; max-height: 65px; width: auto; height: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.7; transition: all 0.3s; }
+        .client-logo-item:hover img { filter: grayscale(0%); opacity: 1; }
+
+        /* 纯净页脚 */
+        footer { background: #00152B; color: #a0aec0; padding: 60px 10% 30px; font-size: 14px; }
+        .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; padding-bottom: 40px; border-bottom: 1px solid #1a365d; }
+        .footer-info h4, .footer-links h4 { color: #ffffff; font-size: 16px; margin-bottom: 20px; font-weight: 600; }
+        .footer-info p { margin-bottom: 10px; color: #cbd5e0; }
+        .footer-links ul { list-style: none; }
+        .footer-links ul li { margin-bottom: 10px; }
+        .footer-links ul li a:hover { color: #ffffff; }
+        .copyright { text-align: center; padding-top: 30px; font-size: 13px; color: #718096; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="double-logo-box">
+            <img class="logo-jx" src="%e4%ba%ac%e4%bf%a1-Photoroom.png" alt="京信瑞通科技">
+            <span class="logo-divider"></span>
+            <img class="logo-bruker" src="bruker_logo.png" alt="Bruker">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="products.html">产品中心</a></li> 
+                <li><a href="cases.html">客户案例</a></li>
+                <li><a href="news.html">新闻发布</a></li>
+                <li><a href="#about">关于我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>领航水泥质控：布鲁克 XRF & XRD 全方位解决方案</h1>
+        <p>从生料配料到熟料定量，以世界顶尖的射线分析技术与智能自动化实验室，赋能现代水泥企业实现极致能耗优化与全面质量管理。</p>
+        <a href="mailto:haihui.cao@jxrtkj.com" class="btn">联系销售工程师询价</a>
+    </section>
+
+    <section class="section" id="about">
+        <h2 class="section-title">ABOUT US / 关于我们</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>京信瑞通科技长期专注于水泥及重工业领域的分析仪器应用。我们紧密携手全球分析仪器巨头德国布鲁克（Bruker），将国际领先的 X 射线荧光光谱（XRF）与 X 射线衍射（XRD）技术引入水泥生产的每一个质控环节。</p>
+                <p>我们不只销售设备，更提供从样品制备、数据分析到系统维护的端到端专家级技术支持。</p>
+                <div class="counters">
+                    <div class="counter-item">
+                        <div class="counter-num">布鲁克</div>
+                        <div class="counter-label">水泥行业全线解决方案</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-num">48h</div>
+                        <div class="counter-label">技术响应承诺</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="image-matrix-grid">
+                <div class="matrix-item">
+                    <img src="s8tiger.png" alt="S8 TIGER">
+                    <span class="matrix-label">S8 TIGER</span>
+                </div>
+                <div class="matrix-item">
+                    <img src="s6.png" alt="S6 JAGUAR">
+                    <span class="matrix-label">S6 JAGUAR</span>
+                </div>
+                <div class="matrix-item">
+                    <img src="D6.png" alt="D6 PHASER">
+                    <span class="matrix-label">D6 PHASER</span>
+                </div>
+                <div class="matrix-item">
+                    <img src="D8E.png" alt="D8 ENDEAVOR">
+                    <span class="matrix-label">D8 ENDEAVOR</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #fff;">
+        <h2 class="section-title">PRODUCTS / 射线分析双翼</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <span class="product-tag">元素与化学成分控制</span>
+                <h3>X 射线荧光光谱仪 (XRF)</h3>
+                <ul>
+                    <li>高精度定量分析 CaO, SiO2, Al2O3, Fe2O3 等核心氧化物</li>
+                    <li>实时指导生料饱和比（KH）、硅酸率（SM）和铝氧率（IM）的配料控制</li>
+                    <li>追踪替代燃料中的硫（S）、氯（Cl）微量元素，防范窑内结皮</li>
+                </ul>
+                <a href="products.html#xrf" class="product-link">了解布鲁克 S8 TIGER / S6 JAGUAR 详情 →</a>
+            </div>
+            <div class="product-card">
+                <span class="product-tag">熟料物相与结构分析</span>
+                <h3>X 射线衍射仪 (XRD)</h3>
+                <ul>
+                    <li>基于 TOPAS 的 Rietveld 全谱拟合技术，直接精准定量 C3S, C2S, C3A, C4AF 真实晶相</li>
+                    <li>10分钟内无损精确测定游离氧化钙（f-CaO）与石膏成分</li>
+                    <li>精确评估矿渣、粉煤灰等无定形混合材的实际掺量</li>
+                </ul>
+                <a href="products.html#xrd" class="product-link">了解布鲁克 D6 PHASER / D8 ENDEAVOR 详情 →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section smart-lab">
+        <div class="lab-container">
+            <h2 class="section-title">SMART LABORATORY / 智能实验室与工业 4.0</h2>
+            <p>面对水泥企业降本增效与智能化转型的迫切需求，我们推出布鲁克智能实验室中央集成方案。将前道自动取样、机械臂自动制样（压片/熔片）、XRF/XRD 自动传输分析以及中控 QCS 质量控制软件完全连为一体。</p>
+            <div class="lab-features">
+                <div class="lab-feat-item">
+                    <h4>无人化全自动流转</h4>
+                    <p>从现场气动管道取样到分析结果生成，全流程无人工干预，消除人为操作误差。</p>
+                </div>
+                <div class="lab-feat-item">
+                    <h4>极致的分析时效性</h4>
+                    <p>样品制备与射线检测无缝并行，生料反馈周期缩短至几分钟内，极速稳定窑炉运行。</p>
+                </div>
+                <div class="lab-feat-item">
+                    <h4>智能全谱定量</h4>
+                    <p>内置 TOPAS 智能专家分析算法，无需繁琐的日常校准，一键输出符合国际标准的工业级物相报告。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section client-cases">
+        <h2 class="section-title">OUR CLIENTS / 我们的客户</h2>
+        <p style="text-align: center; color: #666; max-width: 600px; margin: -30px auto 40px; font-size: 15px;">紧密携手中国卓越的水泥制造企业，以精准射线分析与自动化方案赋能绿色智能转型</p>
+        <div class="logo-wall">
+            <div class="client-logo-item">
+                <img src="client-logo1.png" alt="合作客户1" onerror="this.style.display='none'; this.parentNode.innerText='合作水泥厂 A'">
+            </div>
+            <div class="client-logo-item">
+                <img src="client-logo2.png" alt="合作客户2" onerror="this.style.display='none'; this.parentNode.innerText='合作水泥厂 B'">
+            </div>
+            <div class="client-logo-item">
+                <img src="client-logo3.png" alt="合作客户3" onerror="this.style.display='none'; this.parentNode.innerText='合作水泥厂 C'">
+            </div>
+            <div class="client-logo-item">
+                <img src="client-logo4.png" alt="合作客户4" onerror="this.style.display='none'; this.parentNode.innerText='合作水泥厂 D'">
+            </div>
+            <div class="client-logo-item">
+                <img src="client-logo5.png" alt="合作客户5" onerror="this.style.display='none'; this.parentNode.innerText='合作水泥厂 E'">
+            </div>
+            <div class="client-logo-item">
+                <img src="client-logo6.png" alt="合作客户6" onerror="this.style.display='none'; this.parentNode.innerText='合作水泥厂 F'">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>京信瑞通科技</h4>
+                <p>德国布鲁克（Bruker）光谱仪/衍射仪水泥行业专家级服务商</p>
+                <p>✉ 邮箱：haihui.cao@jxrtkj.com</p>
+                <p>☎ 电话：+86 (010) 6161-5270</p>
+            </div>
+            <div class="footer-links">
+                <h4>产品方案</h4>
+                <ul>
+                    <li><a href="products.html#xrf">XRF 荧光光谱 analysis</a></li>
+                    <li><a href="products.html#xrd">XRD 熟料物相定量</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>动态与支持</h4>
+                <ul>
+                    <li><a href="cases.html">客户案例</a></li>
+                    <li><a href="news.html">新闻发布</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright © 2026 京信瑞通科技 - 德国布鲁克 (Bruker) 水泥行业独家代理商. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+
+<!-- Mirrored from www.jxrtkj.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2026 07:10:45 GMT -->
+</html>

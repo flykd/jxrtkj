@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Mirrored from www.jxrtkj.com/news.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2026 07:10:30 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻发布 - 京信瑞通科技</title>
+    <style>
+        /* 德系工业风核心基础样式 */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; color: #333; line-height: 1.6; background-color: #f8f9fa; }
+        a { text-decoration: none; color: inherit; }
+
+        /* 统一顶层页眉 */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 12px 10%; background: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .double-logo-box { display: flex; align-items: center; gap: 15px; }
+        .logo-jx { height: 42px; width: auto; }
+        .logo-divider { width: 1px; height: 24px; background-color: #d2d6dc; }
+        .logo-bruker { height: 32px; width: auto; }
+        nav ul { display: flex; list-style: none; align-items: center; }
+        nav ul li { margin-left: 30px; font-weight: 500; }
+        nav ul li a:hover, nav ul li a.active { color: #0056b3; }
+
+        .container { padding: 60px 10%; max-width: 1200px; margin: 0 auto; }
+        .page-title { font-size: 32px; color: #002A54; margin-bottom: 20px; font-weight: 700; border-bottom: 2px solid #002A54; padding-bottom: 10px; }
+        .page-subtitle { font-size: 16px; color: #666; margin-bottom: 50px; }
+
+        /* 新闻卡片流布局 */
+        .news-list { display: flex; flex-direction: column; gap: 30px; }
+        .news-card { background: #ffffff; border-radius: 6px; padding: 30px; border: 1px solid #eaeaea; box-shadow: 0 4px 12px rgba(0,0,0,0.02); display: flex; gap: 25px; transition: transform 0.3s, box-shadow 0.3s; }
+        .news-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); border-color: #0056b3; }
+        
+        /* 新闻左侧日期区块 */
+        .news-date-box { width: 90px; height: 90px; background: #e6f0fa; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #002A54; flex-shrink: 0; }
+        .date-day { font-size: 28px; font-weight: 700; line-height: 1; }
+        .date-year-month { font-size: 12px; margin-top: 5px; color: #4a5568; }
+
+        /* 新闻图片与多图垂直并列口袋 */
+        .news-img-column { display: flex; flex-direction: column; gap: 12px; flex-shrink: 0; }
+        .news-thumb-img { width: 240px; height: 160px; object-fit: cover; border-radius: 4px; border: 1px solid #eaeaea; cursor: zoom-in; transition: transform 0.2s; }
+        .news-thumb-img:hover { transform: scale(1.02); box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+
+        /* 新闻右侧文本区块 */
+        .news-content { flex-grow: 1; }
+        .news-card-title { font-size: 20px; color: #1a202c; font-weight: 700; margin-bottom: 12px; }
+        .news-excerpt { font-size: 14px; color: #666; margin-bottom: 15px; text-align: justify; line-height: 1.7; }
+        .news-meta { font-size: 12px; color: #999; display: flex; gap: 20px; }
+        .news-tag { color: #0056b3; font-weight: 600; }
+
+        /* 黑色半透明全屏大图遮罩层（灯箱效果） */
+        .image-lightbox-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); display: flex; align-items: center; justify-content: center; z-index: 2000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; cursor: zoom-out; }
+        .image-lightbox-overlay.active { opacity: 1; pointer-events: auto; }
+        .lightbox-big-img { max-width: 90%; max-height: 85%; object-fit: contain; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transform: scale(0.95); transition: transform 0.3s ease; }
+        .image-lightbox-overlay.active .lightbox-big-img { transform: scale(1); }
+
+        /* 纯净页脚 */
+        footer { background: #00152B; color: #a0aec0; padding: 40px 10%; font-size: 14px; margin-top: 80px; }
+        .footer-content { text-align: center; color: #718096; font-size: 13px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="double-logo-box">
+            <a href="index-2.html"><img class="logo-jx" src="%e4%ba%ac%e4%bf%a1-Photoroom.png" alt="京信瑞通科技"></a>
+            <span class="logo-divider"></span>
+            <a href="index-2.html"><img class="logo-bruker" src="bruker_logo.png" alt="Bruker"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index-2.html">首页</a></li>
+                <li><a href="products.html">产品中心</a></li> 
+                <li><a href="cases.html">客户案例</a></li>
+                <li><a href="news.html" class="active">新闻发布</a></li>
+                <li><a href="index-2.html#about">关于我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">新闻发布 / NEWS</h1>
+        <p class="page-subtitle">实时追踪京信瑞通科技在水泥工业质控前沿的最新动态、项目签约喜报及技术服务进展。</p>
+
+        <div class="news-list">
+
+            <div class="news-card">
+                <div class="news-date-box">
+                    <div class="date-day">22</div>
+                    <div class="date-year-month">2025.11</div>
+                </div>
+                
+                <div class="news-img-column">
+                    <img class="news-thumb-img" src="2.jpg" onclick="openLightbox(this.src)" alt="国检表彰会及质量控制技术论坛现场">
+                </div>
+
+                <div class="news-content">
+                    <h3 class="news-card-title">京信瑞通出席全国水泥品质指标检验大对比表彰会暨第九届水泥质量控制技术论坛</h3>
+                    <p class="news-excerpt">
+                        京信瑞通科技应邀出席全国水泥品质指标检验大对比表彰会暨第九届水泥质量控制技术论坛。作为德国布鲁克（Bruker）水泥行业授权总代理，京信瑞通在现场展示了专为智慧水泥厂构建的自动化实验室解决方案。系统通过 XRF 与 XRD 在线集成技术，实现生料全自动配料、熟料真实晶相分析及游离钙（f-CaO）极速定量，为水泥企业关键环节提供卓越的质控把关，获得现场专家的高度认可。
+                    </p>
+                    <div class="news-meta">
+                        <span>来源：大会现场报道</span>
+                        <span class="news-tag"># 展会动态</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-date-box">
+                    <div class="date-day">18</div>
+                    <div class="date-year-month">2025.01</div>
+                </div>
+                
+                <div class="news-img-column">
+                    <img class="news-thumb-img" src="tongli1.jpg" onclick="openLightbox(this.src)" alt="洛阳黄河同力水泥智能实验室现场1" onerror="this.src='2.jpg';">
+                    <img class="news-thumb-img" src="tongli2.jpg" onclick="openLightbox(this.src)" alt="洛阳黄河同力水泥智能实验室现场2" onerror="this.src='2.jpg';">
+                </div>
+
+                <div class="news-content">
+                    <h3 class="news-card-title"><span style="color: #0056b3;">[项目喜报]</span> 洛阳黄河同力水泥有限责任公司全自动智能实验室项目顺利交付</h3>
+                    <p class="news-excerpt">
+                        近日，黄河同力水泥智能化实验室正式建成投运。京信瑞通科技为该项目提供布鲁克 S8 TIGER 荧光光谱仪和 D8 ENDEAVOR  衍射仪，并完成分析设备与智能实验室系统的对接应用。依托智能制样、自动输送及生产中控系统的协同运行，实现分析数据秒级反馈，为熟料烧成稳定控制、产品质量优化和工厂智能制造提供了强有力的数据支撑。
+                    </p>
+                    <div class="news-meta">
+                        <span>来源：销售部</span>
+                        <span class="news-tag"># 业绩喜报</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-date-box">
+                    <div class="date-day">26</div>
+                    <div class="date-year-month">2023.04</div>
+                </div>
+                
+                <div class="news-img-column">
+                    <img class="news-thumb-img" src="news-forum2023.jpg" onclick="openLightbox(this.src)" alt="第四届中国水泥智能化高峰论坛演讲现场1">
+                    <img class="news-thumb-img" src="news-forum2023-2.jpg" onclick="openLightbox(this.src)" alt="第四届中国水泥智能化高峰论坛演讲现场2">
+                </div>
+
+                <div class="news-content">
+                    <h3 class="news-card-title">京信瑞通出席第四届中国水泥智能化高峰论坛</h3>
+                    <p class="news-excerpt">
+                        在“第四届中国水泥智能化高峰论坛”上，京信瑞通科技携手德国布鲁克（Bruker）展示了水泥“智能化实验室”中央集成方案。该系统将现场自动取样与后道自动化实验室无缝并行，全面突出 XRF 与 XRD 的质控核心优势：
+                        <br><br>
+                        <strong>▪ XRF 成分控制优势：</strong> 实现对生料饱和比（KH）、硅酸率（SM）的无人工干预极速检测，实时指导精准配料，并强力追踪替代燃料中的硫、氯等有害元素。
+                        <br>
+                        <strong>▪ XRD 物相定量优势：</strong> 基于行业顶尖的 TOPAS 专家算法，将熟料中 C3S、C2S 真实晶相以及游离钙（f-CaO）的无损定量分析缩短至几分钟内，彻底消除传统化学法误差，全面赋能水泥企业降本增效与智能化转型。
+                    </p>
+                    <div class="news-meta">
+                        <span>来源：大会现场报道</span>
+                        <span class="news-tag"># 展会动态</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="image-lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
+        <img class="lightbox-big-img" id="lightboxBigImg" src="#" alt="放大查看">
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            Copyright © 2026 京信瑞通科技 - 德国布鲁克 (Bruker) 水泥行业独家代理商. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        function openLightbox(imageSrc) {
+            var overlay = document.getElementById('lightboxOverlay');
+            var bigImg = document.getElementById('lightboxBigImg');
+            bigImg.src = imageSrc;
+            overlay.classList.add('active');
+        }
+
+        function closeLightbox() {
+            var overlay = document.getElementById('lightboxOverlay');
+            overlay.classList.remove('active');
+        }
+    </script>
+
+</body>
+
+<!-- Mirrored from www.jxrtkj.com/news.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Jul 2026 07:10:45 GMT -->
+</html>
